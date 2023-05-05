@@ -6,13 +6,49 @@ var lowerCase = []
 var specialCharacters = []
 
 var generateBtn = document.querySelector("#generate");
-function generatePasswordprompts() 
-{
-    var length = prompt("enter length of at least 8 characters and no more than 128 characters")
-   console.log(length)
-}
+var basket = []
+
 function generatePassword(){
-    var prompts = generatePasswordprompts();
+    var length = prompt("enter length of at least 8 characters and no more than 128 characters")
+    console.log(length)
+    
+
+    var isNumber = confirm("Do you want numbers in your password")
+    if (isNumber === true) {
+        basket.concat(numbers)
+      }
+
+
+
+
+    var isUpperCase = confirm("Do you want uppercase in your password")
+    if (isUpperCase === true) {
+      basket.concat(upperCase)
+    }
+
+
+
+    var isLowerCase = confirm("Do you want lowercase in your password")
+    if (isLowerCase === true) {
+      basket.concat(lowerCase)
+    }
+
+    var isSpecialCharacters = confirm("Do you want special characters in your password")
+    if (isSpecialCharacters === true) {
+      basket.concat(specialCharacters)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
 // Write password to the #password input
 function writePassword() {
